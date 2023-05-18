@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:00:51 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/18 16:48:32 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/18 19:13:35 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
-	char	*t;
 
-	t = (char *)s;
 	i = 0;
 	while (i < n)
 	{
-		*(t + i) = '\0';
+		*(char *)(s + i) = '\0';
 		i++;
 	}
 }
