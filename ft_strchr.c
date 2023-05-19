@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:30:56 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/19 14:17:44 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/19 16:40:10 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	while (*s)
 	{
 		if (*s == (char)c)
 			return ((char *)s);
