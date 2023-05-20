@@ -6,14 +6,13 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:30:58 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/20 15:49:52 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/20 21:45:54 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	concatenate(char *restrict dst, const char *restrict src,
-		size_t dstsize)
+static void	concatenate(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
@@ -32,7 +31,7 @@ static void	concatenate(char *restrict dst, const char *restrict src,
 		*(dst + i) = '\0';
 }
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;
 	size_t	dst_len;
