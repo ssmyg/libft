@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:49:00 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/19 16:35:33 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/20 16:52:11 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src,
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 			size_t dstsize);
 size_t	ft_strlen(const char *s);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
