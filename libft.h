@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:49:00 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/21 14:25:24 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/21 14:39:30 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 
+// part 1
 int		ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);
 //void	*calloc(size_t count, size_t size); // memset実装後に作成
@@ -42,5 +43,20 @@ char	*ft_strrchr(const char *s, int c);
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+/*
+// part2
+ft_substr
+ft_strjoin
+ft_strtrim
+ft_split
+ft_itoa
+ft_strmapi
+ft_striteri
+ft_putchar_fd
+ft_putstr_fd
+ft_putendl_fd
+ft_putnbr_fd
+*/
 
 #endif
