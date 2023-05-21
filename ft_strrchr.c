@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 13:55:09 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/21 14:05:04 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/21 14:07:15 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*ft_strrchr(const char *s, int c)
 	while (*t)
 		t++;
 	if ((char)c == '\0')
-		return ((char *)t);
+		return (t);
 	t--;
 	while (t >= s)
 	{
 		if (*t == (char)c)
-			return ((char *)t);
+			return (t);
 		t--;
 	}
 	return (NULL);
