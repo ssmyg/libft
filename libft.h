@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:49:00 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/21 16:43:55 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/21 16:59:27 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,9 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
-/*
 // part2
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+/*
 ft_substr
 ft_strjoin
 ft_strtrim
