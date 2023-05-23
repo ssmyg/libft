@@ -6,14 +6,14 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:21:42 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/23 11:32:14 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/23 11:36:25 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	**malloc_ret(char const *s, char c)
+static char	**malloc_ret(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -36,7 +36,7 @@ char	**malloc_ret(char const *s, char c)
 	return (ret);
 }
 
-size_t	word_len(char const *s, char c, size_t i)
+static size_t	word_len(char const *s, char c, size_t i)
 {
 	size_t	count;
 
