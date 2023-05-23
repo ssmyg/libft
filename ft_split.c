@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:21:42 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/23 11:36:25 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/23 19:20:04 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,18 +49,26 @@ static size_t	word_len(char const *s, char c, size_t i)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static void	free_ret(char **ret, size_t k)
 {
-	char	**ret;
+	size_t	i;
+
+	i = 0;
+	while (i < k)
+	{
+		free(ret[i]);
+		i++;
+	}
+	free(ret);
+}
+
+static int	split(char const *s, char c, char **ret)
+{
 	size_t	i;
 	size_t	k;
 	size_t	len;
+	char	*word;
 
-	if (!s)
-		return (NULL);
-	ret = malloc_ret(s, c);
-	if (!ret)
-		return (NULL);
 	i = 0;
 	k = 0;
 	while (s[i])
@@ -69,8 +77,30 @@ char	**ft_split(char const *s, char c)
 		if ((i == 0 && s[i] != c) || (s[i - 1] == c && s[i] != c))
 			len = word_len(s, c, i);
 		if (len > 0)
-			ret[k++] = ft_substr(s, i, len);
+		{
+			word = ft_substr(s, i, len);
+			if (!word)
+			{
+				free_ret(ret, k);
+				return (0);
+			}
+			ret[k++] = word;
+		}
 		i++;
 	}
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**ret;
+
+	if (!s)
+		return (NULL);
+	ret = malloc_ret(s, c);
+	if (!ret)
+		return (NULL);
+	if (!split(s, c, ret))
+		return (NULL);
 	return (ret);
 }
