@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 16:15:09 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/21 17:06:03 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/25 08:56:23 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (size > 0 && SIZE_MAX / size < count)
 		return (NULL);
-	ret = (void *)malloc(size * count);
+	ret = malloc(size * count);
 	if (!ret)
 		return (NULL);
 	return (ft_memset(ret, '\0', size * count));
