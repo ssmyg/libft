@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:22:15 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/24 16:35:41 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/25 09:22:52 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		f(i, (s + i));
+		(*f)(i, (s + i));
 		i++;
 	}
 }

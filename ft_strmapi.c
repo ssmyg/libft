@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:14:37 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/24 16:35:58 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/25 09:25:08 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i])
 	{
-		ret[i] = f(i, s[i]);
+		ret[i] = (*f)(i, s[i]);
 		i++;
 	}
 	return (ret);
