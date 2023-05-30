@@ -7,11 +7,21 @@ SRCS=ft_atoi.c ft_calloc.c \
 	ft_toupper.c ft_tolower.c \
 	ft_itoa.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c ft_striteri.c
+BONUS_SRCS=ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS=$(SRCS:.c=.o)
+BONUS_OBJS=$(SRCS:.c=.o) $(BONUS_SRCS:.c=.o)
+ifdef BONUS_FLG
+OBJS=$(BONUS_OBJS)
+endif
+
 AR_FLAGS=rcs
 
 all: $(NAME)
+
+bonus:
+	$(MAKE) BONUS_FLG=1
 
 $(NAME): $(OBJS)
 	$(AR) $(AR_FLAGS) $(NAME) $(OBJS)
@@ -22,7 +32,7 @@ $(OBJS):
 .PHONY: clean fclean re test
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(BONUS_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
