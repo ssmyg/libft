@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 17:56:56 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/18 18:15:09 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/30 16:48:59 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		ret = (int)(*(char *)(s1 + i) - *(char *)(s2 + i));
+		ret = (int)(*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
 		if (ret)
 			return (ret);
 		i++;

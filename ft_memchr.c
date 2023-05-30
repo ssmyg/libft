@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:20:46 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/21 17:21:12 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/30 16:50:20 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (*(char *)(s + i) == (char)c)
+		if (*(unsigned char *)(s + i) == (unsigned char)c)
 			return ((void *)(s + i));
 		i++;
 	}
