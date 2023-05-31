@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:58:35 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/31 12:00:01 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/31 13:19:38 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*prev;
 
+	if (!lst)
+		return (NULL);
 	prev = lst;
 	while (lst)
 	{
