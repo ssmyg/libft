@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:18:09 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/30 16:49:48 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/31 16:05:08 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 
+	if (!b)
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{

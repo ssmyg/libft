@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 16:44:23 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/25 09:22:04 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/31 16:06:00 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 	char	*ret;
 
+	if (!s1)
+		return (NULL);
 	len = ft_strlen(s1);
 	ret = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ret)

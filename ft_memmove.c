@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:06:26 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/30 17:03:23 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/31 16:04:24 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 
-	if (!dst && !src)
+	if (!dst || !src)
 		return (NULL);
 	if (dst < src)
 	{

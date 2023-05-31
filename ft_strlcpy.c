@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:34:30 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/20 21:54:50 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/31 13:49:08 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
-	if (!dst)
+	if (!dst || !src)
 		return (0);
 	i = 0;
 	while (*(src + i))
