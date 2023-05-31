@@ -6,44 +6,44 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:13:05 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/30 17:32:51 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/31 15:58:05 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*search(const char *haystack, const char *needle, size_t len)
+int	is_match_needle(const char *haystack, const char *needle, size_t i,
+		size_t len)
 {
-	char	*ret;
-	char	*orig_needle;
-	size_t	i;
-
-	ret = NULL;
-	orig_needle = (char *)needle;
-	i = 0;
-	while (*haystack && i < len)
+	while (*needle && *haystack && i < len)
 	{
-		if (*haystack == *needle)
-		{
-			if (needle == orig_needle)
-				ret = (char *)haystack;
-			needle++;
-			if (*needle == '\0')
-				return (ret);
-		}
-		else
-			needle = orig_needle;
+		if (*haystack != *needle)
+			return (0);
 		haystack++;
+		needle++;
 		i++;
 	}
-	return (NULL);
+	if (*needle == '\0')
+		return (1);
+	return (0);
 }
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
+	size_t	i;
+
 	if (!haystack || !needle)
 		return (NULL);
 	if (*needle == '\0')
 		return ((char *)haystack);
-	return (search(haystack, needle, len));
+	i = 0;
+	while (*haystack && i < len)
+	{
+		if (*haystack == *needle)
+			if (is_match_needle(haystack, needle, i, len))
+				return ((char *)haystack);
+		haystack++;
+		i++;
+	}
+	return (NULL);
 }
