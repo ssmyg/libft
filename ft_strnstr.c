@@ -6,13 +6,13 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:13:05 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/31 15:58:05 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/05/31 16:19:49 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_match_needle(const char *haystack, const char *needle, size_t i,
+static int	is_match_needle(const char *haystack, const char *needle, size_t i,
 		size_t len)
 {
 	while (*needle && *haystack && i < len)
