@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:13:05 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/31 16:19:49 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/06/01 11:32:57 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 
-	if (!haystack || !needle)
+	if (len == 0 && (!haystack || !needle ))
 		return (NULL);
 	if (*needle == '\0')
 		return ((char *)haystack);
