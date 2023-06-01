@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:30:58 by susumuyagi        #+#    #+#             */
-/*   Updated: 2023/05/31 16:14:37 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/06/01 11:51:32 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dst_len;
 
 	src_len = ft_strlen(src);
-	if (!dst)
+	if (!dst && dstsize == 0)
 		return (src_len);
 	dst_len = ft_strlen(dst);
 	if (dstsize <= dst_len)
