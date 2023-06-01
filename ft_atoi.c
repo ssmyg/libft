@@ -6,7 +6,7 @@
 /*   By: susumuyagi <susumuyagi@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 15:41:31 by syagi             #+#    #+#             */
-/*   Updated: 2023/05/31 16:00:55 by susumuyagi       ###   ########.fr       */
+/*   Updated: 2023/06/01 10:05:41 by susumuyagi       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,5 @@ static long	ft_strtol(char *str)
 
 int	ft_atoi(char *str)
 {
-	if (!str)
-		return (0);
 	return ((int)ft_strtol(str));
 }
